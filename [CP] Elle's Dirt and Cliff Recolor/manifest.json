@@ -1,0 +1,12 @@
+{
+   "Name": "Elle's Dirt and Cliff Recolor",
+   "Author": "Elle/Junimods",
+   "Version": "1.2.7",
+   "Description": "Uses CP's overlay feature to recolor all the cliffs and yellow dirt!",
+   "UniqueID": "Elle.DirtCliffRecolor",
+   "MinimumApiVersion": "2.5",
+   "UpdateKeys": [ "Nexus:1966" ],
+   "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher"
+   },
+}

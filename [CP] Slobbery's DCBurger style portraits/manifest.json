@@ -1,0 +1,10 @@
+{
+   "Name": "Slobbery's DCBurger Style Portraits",
+   "Author": "Slobbery",
+   "Version": "1.0",
+   "Description": "DCBurgerStylePortraits",
+   "UniqueID": "Slobbery.SlobberysDCBurgerStylePortraits",
+   "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}

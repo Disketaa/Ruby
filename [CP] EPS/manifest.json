@@ -1,0 +1,11 @@
+{
+  "Name": "Enhanced Player Sprites",
+  "Author": "Jackeloko",
+  "Version": "3.1",
+  "Description": "Enhances the appearance of player sprites and clothing.",
+  "UniqueID": "Jackeloko.EPS",
+  "UpdateKeys": ["Nexus:2331"],
+  "ContentPackFor": {
+      "UniqueID": "Pathoschild.ContentPatcher",
+   }
+}

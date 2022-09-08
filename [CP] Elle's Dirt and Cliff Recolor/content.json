@@ -1,0 +1,413 @@
+{
+  "Format": "1.19.0",
+  
+  "ConfigSchema": {
+    "Dirt and Cliff Recolor": {"AllowValues": "True, False",
+	"Default": "True"},
+	
+    "Island Recolor": {"AllowValues": "True, False",
+	"Default": "True"},
+	
+    "Beach Farm Recolor": {"AllowValues": "True, False",
+	"Default": "True"},
+	
+	"Darker Fertilizer": {"AllowValues": "True, False",
+	"Default": "True"},
+	
+	"Darker Worms": {"AllowValues": "True, False",
+	"Default": "True"},
+	
+	"Seasonal Map": {"AllowValues": "True, False",
+	"Default": "True"},
+	},
+	
+	
+  "Changes": [
+
+       // Outdoors
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/{{season}}_outdoorsTileSheet",
+          "FromFile": "assets/{{season}}_outdoorsTileSheet.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Season": "spring, summer, fall",
+		  "LocationName |contains=IslandSouth, IslandEast, IslandNorth, IslandWest, IslandSouthEast, Farm": "False",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/{{season}}_outdoorsTileSheet2",
+          "FromFile": "assets/{{season}}_outdoorsTileSheet2.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Season": "spring, summer, fall",
+		  "LocationName |contains=IslandSouth, IslandEast, IslandNorth, IslandWest, IslandSouthEast, Farm": "False",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/{{season}}_outdoorsTileSheet",
+          "FromFile": "assets/{{season}}_outdoorsTileSheet.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Season": "spring, summer, fall",
+		  "LocationName |contains=Farm": "True",
+		  "FarmType": "Standard, FourCorners, Forest, Hilltop, Riverland, Wilderness, Custom",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/{{season}}_outdoorsTileSheet2",
+          "FromFile": "assets/{{season}}_outdoorsTileSheet2.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Season": "spring, summer, fall",
+		  "LocationName |contains=Farm": "True",
+		  "FarmType": "Standard, FourCorners, Forest, Hilltop, Riverland, Wilderness, Custom",
+		  },
+		  "Update": "OnLocationChange",
+       },
+
+       // Outdoors Island
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/summer_outdoorsTileSheet",
+          "FromFile": "assets/summer_outdoorsTileSheet.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "LocationName |contains=IslandSouth, IslandEast, IslandNorth, IslandWest, IslandSouthEast": "True",
+		  "Island Recolor": "True",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/summer_outdoorsTileSheet2",
+          "FromFile": "assets/summer_outdoorsTileSheet2.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "LocationName |contains=IslandSouth, IslandEast, IslandNorth, IslandWest, IslandSouthEast": "True",
+		  "Island Recolor": "True",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+
+       // Outdoors Beach Farm
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/{{season}}_outdoorsTileSheet",
+          "FromFile": "assets/{{season}}_outdoorsTileSheet.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Season": "spring, summer, fall",
+		  "LocationName": "Farm",
+		  "Beach Farm Recolor": "True",
+		  "FarmType |contains=Standard, FourCorners, Forest, Hilltop, Riverland, Wilderness, Custom": "False",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/{{season}}_outdoorsTileSheet2",
+          "FromFile": "assets/{{season}}_outdoorsTileSheet2.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Season": "spring, summer, fall",
+		  "LocationName": "Farm",
+		  "Beach Farm Recolor": "True",
+		  "FarmType |contains=Standard, FourCorners, Forest, Hilltop, Riverland, Wilderness, Custom": "False",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   // Island
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/island_tilesheet_1",
+          "FromFile": "assets/island_tilesheet_1.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Island Recolor": "True",
+		  "LocationName |contains=IslandSouth, IslandEast, IslandNorth, IslandWest, IslandSouthEast": "True",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/{{season}}_island_tilesheet_1",
+          "FromFile": "assets/season_island_tilesheet_1.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Season": "spring, summer, fall",
+		  "Island Recolor": "True",
+		  "LocationName |contains=IslandSouth, IslandEast, IslandNorth, IslandWest, IslandSouthEast": "True",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/winter_island_tilesheet_1",
+          "FromFile": "assets/winter_island_tilesheet_1.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Season": "winter",
+		  "Island Recolor": "True",
+		  "LocationName |contains=IslandSouth, IslandEast, IslandNorth, IslandWest, IslandSouthEast": "True",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   
+	   // Island Beach Farm
+	   
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/island_tilesheet_1",
+          "FromFile": "assets/island_tilesheet_1.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "LocationName": "Farm",
+		  "Beach Farm Recolor": "True",
+		  "FarmType |contains=Standard, FourCorners, Forest, Hilltop, Riverland, Wilderness, Custom": "False",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/{{season}}_island_tilesheet_1",
+          "FromFile": "assets/season_island_tilesheet_1.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Season": "spring, summer, fall",
+		  "LocationName": "Farm",
+		  "Beach Farm Recolor": "True",
+		  "FarmType |contains=Standard, FourCorners, Forest, Hilltop, Riverland, Wilderness, Custom": "False",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/winter_island_tilesheet_1",
+          "FromFile": "assets/winter_island_tilesheet_1.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Season": "winter",
+		  "LocationName": "Farm",
+		  "Beach Farm Recolor": "True",
+		  "FarmType |contains=Standard, FourCorners, Forest, Hilltop, Riverland, Wilderness, Custom": "False",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   // Town
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/{{season}}_town",
+          "FromFile": "assets/{{season}}_town.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Season": "spring, summer, fall",
+		  }
+       },
+	   
+	   // HoeDirt
+	   {
+          "Action": "EditImage",
+          "Target": "TerrainFeatures/hoeDirt",
+          "FromFile": "assets/hoeDirt_{{season}}.png",
+          "When": {
+		  "Season": "spring, summer, fall",
+		  "Dirt and Cliff Recolor": "True",
+		  "LocationName |contains=IslandSouth, IslandEast, IslandNorth, IslandWest, IslandSouthEast, Farm": "False",
+		  },
+		  "Update": "OnLocationChange",
+       },	
+	   {
+          "Action": "EditImage",
+          "Target": "TerrainFeatures/hoeDirtDark",
+          "FromFile": "assets/hoeDirtDark_{{season}}.png",
+          "When": {
+		  "Season": "spring, summer, fall",
+		  "Dirt and Cliff Recolor": "True",
+		  "LocationName |contains=IslandSouth, IslandEast, IslandNorth, IslandWest, IslandSouthEast, Farm": "False",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "TerrainFeatures/hoeDirt",
+          "FromFile": "assets/hoeDirt_{{season}}.png",
+          "When": {
+		  "Season": "spring, summer, fall",
+		  "Dirt and Cliff Recolor": "True",
+		  "LocationName |contains=Farm": "True",
+		  "FarmType": "Standard, FourCorners, Forest, Hilltop, Riverland, Wilderness, Custom",
+		  },
+		  "Update": "OnLocationChange",
+       },	
+	   {
+          "Action": "EditImage",
+          "Target": "TerrainFeatures/hoeDirtDark",
+          "FromFile": "assets/hoeDirtDark_{{season}}.png",
+          "When": {
+		  "Season": "spring, summer, fall",
+		  "Dirt and Cliff Recolor": "True",
+		  "LocationName |contains=Farm": "True",
+		  "FarmType": "Standard, FourCorners, Forest, Hilltop, Riverland, Wilderness, Custom",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   // HoeDirt Island
+	   {
+          "Action": "EditImage",
+          "Target": "TerrainFeatures/hoeDirt",
+          "FromFile": "assets/hoeDirt_summer.png",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Island Recolor": "True",
+		  "LocationName |contains=IslandSouth, IslandEast, IslandNorth, IslandWest, IslandSouthEast": "True",
+		  },
+		  "Update": "OnLocationChange",
+       },	
+	   {
+          "Action": "EditImage",
+          "Target": "TerrainFeatures/hoeDirtDark",
+          "FromFile": "assets/hoeDirtDark_summer.png",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  "Island Recolor": "True",
+		  "LocationName |contains=IslandSouth, IslandEast, IslandNorth, IslandWest, IslandSouthEast": "True",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   //HoeDirt Beach Farm
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "TerrainFeatures/hoeDirt",
+          "FromFile": "assets/hoeDirt_{{season}}.png",
+          "When": {
+		  "Season": "spring, summer, fall",
+		  "Dirt and Cliff Recolor": "True",
+		  "LocationName": "Farm",
+		  "Beach Farm Recolor": "True",
+		  "FarmType |contains=Standard, FourCorners, Forest, Hilltop, Riverland, Wilderness, Custom": "False",
+		  },
+		  "Update": "OnLocationChange",
+       },	
+	   {
+          "Action": "EditImage",
+          "Target": "TerrainFeatures/hoeDirtDark",
+          "FromFile": "assets/hoeDirtDark_{{season}}.png",
+          "When": {
+		  "Season": "spring, summer, fall",
+		  "Dirt and Cliff Recolor": "True",
+		  "LocationName": "Farm",
+		  "Beach Farm Recolor": "True",
+		  "FarmType |contains=Standard, FourCorners, Forest, Hilltop, Riverland, Wilderness, Custom": "False",
+		  },
+		  "Update": "OnLocationChange",
+       },
+	   
+	   // Greenhouse Dirt
+	   {
+          "Action": "EditImage",
+          "Target": "townInterior",
+          "FromFile": "assets/townInterior.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  }
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "Maps/townInterior",
+          "FromFile": "assets/townInterior.png",
+          "Patchmode": "Overlay",
+          "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  }
+       },
+	   
+	   
+	   // Seasonal Map
+	   {
+          "Action": "EditImage",
+          "Patchmode": "Overlay",
+          "Target": "LooseSprites/map",
+          "FromFile": "assets/map_{{season}}.png",
+          "When": {
+		  "Seasonal Map": "True",
+		  "HasMod |contains=Bouhm.NPCMapLocations": false,
+		  }
+       },
+	   
+       // Cursors
+	   {
+          "Action": "EditImage",
+          "Target": "LooseSprites/Cursors",
+          "FromFile": "assets/Cursors.png",
+          "Patchmode": "Overlay",
+		  "When": {
+		  "Dirt and Cliff Recolor": "True",
+		  }
+       },
+	   {
+          "Action": "EditImage",
+          "Target": "LooseSprites/Cursors",
+          "FromFile": "assets/fertilizer.png",
+          "Patchmode": "Replace",
+		  "ToArea": { "X": 173, "Y": 462, "Width": 48, "Height": 48 },
+		  "When": {
+		  "Darker Fertilizer": "True",
+		  }
+       },
+	   
+	   {
+          "Action": "EditImage",
+          "Target": "LooseSprites/Cursors",
+          "FromFile": "assets/Worms_{{season}}.png",
+          "Patchmode": "Replace",
+		  "ToArea": { "X": 368, "Y": 32, "Width": 64, "Height": 16 },
+		  "When": {
+		  "Season": "spring, summer, fall",
+		  "Darker Worms": "True",
+		  }
+       },
+    ]
+}

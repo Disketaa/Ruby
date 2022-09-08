@@ -1,0 +1,17 @@
+{
+	"installationchecker.installation.incorrect": "Stadew Valley Expanded похоже, что он установлен неправильно.",
+	"installationchecker.missing.mods": "Не обнаружено модов, необходимых для Stadew Valley Expanded...",
+	"installationchecker.missing.mods.cont": "Пожалуйста, загрузите или убедитесь, что вы правильно установили следующее:",
+	"installationchecker.outdated.mods": "Обнаруженные версии модов, устаревшие для использования в Stadew Valley Expanded...",
+	"installationchecker.outdated.mods.cont": "Пожалуйста, обновите следующее перед началом игры:",
+	"installationchecker.orphaned.mods": "Не удалось найти следующий требуемый мод(ы). Либо их нет",
+	"installationchecker.orphaned.mods.cont": "установлены, или у них отсутствуют собственные зависимости. Пожалуйста, проверьте ниже:",
+	"installationchecker.mod.info": "{{modName}}от {{author}} -",
+	"installationchecker.mod.parents": "Соответствующее требование: {{parents}}",
+	"installationchecker.smapi.outdated": "SMAPI устарел! Пожалуйста, обновите его как можно скорее!",
+	"installationchecker.component.missing": "\n\n\nКажется, есть проблема с установкой Stadew Valley Expanded.\nПожалуйста, посетите https://smapi.io/log и следуйте инструкциям на этом сайте, чтобы загрузить свой журнал.\nПрокрутите страницу до верха и прочитайте красный текст, чтобы определить ошибки.\n\n\n",
+	"installationchecker.help.message": "Если вам нужна помощь, посетите сервер автора мода Discord от SVE! https://discord.gg/TBevpV28 (английский), либо пишите об ошибках на нашей странице нексуса с переводом",
+	"installationchecker.start": "Запуск Средства проверки установки...",
+	"installationchecker.credits": "(Средство проверки установки, предоставленное shekurika и moe)",
+	"installationchecker.success": "Проверка установки завершена. Кажется, все в порядке!"
+}

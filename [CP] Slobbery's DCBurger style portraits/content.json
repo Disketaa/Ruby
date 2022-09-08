@@ -1,0 +1,66 @@
+{
+   "Format": "1.22.0",
+
+    "ConfigSchema": {
+    "Olivia": {"AllowValues": "nowine, wine, False",
+	"Default": "nowine"},
+    "Claire": {"AllowValues": "Claire, Claire_Joja, Claire_Theater",
+	"Default": "Claire"},
+	},
+	
+
+"Dependencies": [
+      { "UniqueID": "FlashShifter.StardewValleyExpandedCP",  "IsRequired": false }, 
+      { "UniqueID": "lunakatt.lunakattsDCBurgerStylePortraitsforSVE",  "IsRequired": false }, 
+   ],
+
+
+
+   "Changes": [
+
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Olivia",
+         "FromFile": "assets/Olivia/{{Olivia}}.png",
+		  "When": {
+		  "Olivia": "nowine, wine",
+		      }
+		      },
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Claire",
+         "FromFile": "assets/Claire.png",
+      },
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Claire_Joja",
+         "FromFile": "assets/Claire_Joja.png",
+	  "When": { "LocationName": "JojaMart" },
+	  "Update": "OnLocationChange"
+      },
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Claire_Theater",
+         "FromFile": "assets/Claire_Theater.png",
+	  "When": { "Spouse |contains=Claire": false, "DayOfWeek": "Monday, Wednesday, Thursday, Friday, Sunday", "HasSeenEvent |contains=502261": false, "LocationName": "MovieTheater" },
+	  "Update": "OnLocationChange"
+      },
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Claire",
+         "FromFile": "assets/Claire_Theater.png",
+	  "When": { "Spouse": "Claire", "DayOfWeek": "Monday, Wednesday, Thursday, Sunday", "HasSeenEvent |contains=502261": false, "LocationName": "MovieTheater" },
+	  "Update": "OnLocationChange"
+      },
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Sophia",
+         "FromFile": "assets/Sophia.png",
+      },
+      {
+         "Action": "EditImage",
+         "Target": "Portraits/Victor",
+         "FromFile": "assets/Victor.png",
+      },
+   ]
+}

@@ -1,0 +1,1548 @@
+// If you came here to change the config, you're in the wrong file!
+// Best not to touch any of this unless you know what you're doing.
+
+{
+	"Format": "1.19.0",
+  	"ConfigSchema": {
+	
+		/////////////
+		// CONFIGS //
+		/////////////
+		
+		"= STANDARD CONFIGS =": {
+			"Default": "@ Read Me!",
+			"Description": "Configure your settings using the dropdown tabs and checkboxes below! Each option contains a small description of what it changes. NOTE: Some changes may not immediately display correctly in the character selection screen, but will fix itself if you start a save or reboot the game."
+		},
+		"Male Jaw": {
+			"AllowValues": "Vanilla, Standard, Round",
+			"Default": "Standard",
+			"Description": "Changes jawline shape for male players. Standard jaw by default."
+		},
+		"Male Face": {
+			"AllowValues": "Vanilla, Square, Round",
+			"Default": "Square",
+			"Description": "Changes face shape for male players. Square face by default."
+		},
+		"Male Nose": {
+			"AllowValues": "None, Vanilla, Pointy, Large",
+			"Default": "Vanilla",
+			"Description": "Changes nose shape for male players. Vanilla nose by default."
+		},
+		"Male Eyes": {
+			"AllowValues": "Small, Vanilla",
+			"Default": "Vanilla",
+			"Description": "Changes eye shape for male players. Vanilla eyes by default."
+		},
+		"Male Eyebrows": {
+			"AllowValues": "None, Short, Long, Unibrow",
+			"Default": "Short",
+			"Description": "Changes eyebrow shape for male players. Short eyebrows by default."
+		},
+		"Male Sleeves": {
+			"AllowValues": "None, Short, Elbow, Long",
+			"Default": "Long",
+			"Description": "Changes sleeve length for male players. Long sleeves by default."
+		},
+		"Male Gloves": {
+			"AllowValues": "None, Brown, Green, Yellow, Black",
+			"Default": "None",
+			"Description": "Changes gloves for male players. No gloves by default."
+		},
+		"Male Shoes": {
+			"AllowValues": "None, Small, Pointy, Large, Sandals",
+			"Default": "Large",
+			"Description": "Changes shoes for male players. Large shoes by default."
+		},
+		"Female Jaw": {
+			"AllowValues": "Vanilla, Standard, Round",
+			"Default": "Standard",
+			"Description": "Changes jawline shape for female players. Standard jaw by default."
+		},
+		"Female Face": {
+			"AllowValues": "Vanilla, Square, Round",
+			"Default": "Vanilla",
+			"Description": "Changes face shapes for female players. Vanilla face by default."
+		},
+		"Female Nose": {
+			"AllowValues": "None, Vanilla, Pointy, Large",
+			"Default": "Vanilla",
+			"Description": "Changes nose shape for female players. Vanilla nose by default."
+		},
+		"Female Eyes": {
+			"AllowValues": "Small, Vanilla",
+			"Default": "Vanilla",
+			"Description": "Changes eye shape for female players. Vanilla eyes by default."
+		},
+		"Female Eyebrows": {
+			"AllowValues": "None, Short, Long, Unibrow",
+			"Default": "Long",
+			"Description": "Changes eyebrow shape for female players. Long eyebrows by default."
+		},
+		"Male Sleeves": {
+			"AllowValues": "None, Short, Elbow, Long",
+			"Default": "Long",
+			"Description": "Changes sleeve length for male players. Long sleeves by default."
+		},
+		"Female Sleeves": {
+			"AllowValues": "None, Short, Elbow, Long",
+			"Default": "Long",
+			"Description": "Changes sleeve length for female players. Long sleeves by default."
+		},
+		"Female Gloves": {
+			"AllowValues": "None, Brown, Green, Yellow, Black",
+			"Default": "None",
+			"Description": "Changes gloves for female players. No gloves by default."
+		},
+		"Female Shoes": {
+			"AllowValues": "None, Small, Pointy, Large, Sandals",
+			"Default": "Pointy",
+			"Description": "Changes shoes for female players. Pointy shoes by default."
+		},
+		"Feminine Torso": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Description": "Toggles feminine torsos for all players. False by default."
+		},
+		"Horse Reins": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles horse reins for all players. True by default."
+		},
+		"* EXPERIMENTAL CONFIGS *": {
+			"Default": "@ Read Me!",
+			"Description": "CAUTION: Changing these may cause unwanted visual bugs or other oddities. Some of these may be useful for those using other mods that change the player, who need to override something from my mod for it to work properly."
+		},
+		"Fix Female Blinking": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Description": "Fixes the blinking animation for female players. False by default. NOTE: Due to technical limitations, this option may visually interfere with certain accessories and/or hairstyles around the chin area."
+		},
+		"EPS Male Base": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles base male body intended for EPS. True by default."
+		},
+		"EPS Female Base": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles base female body intended for EPS. True by default."
+		},
+		"EPS Accessories": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles accessories intended for EPS. True by default."
+		},
+		"EPS Hats": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles hats intended for EPS. True by default."
+		},
+		"EPS Hairstyles": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles hairstyles intended for EPS. True by default."
+		},
+		"EPS Shirts": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles shirts intended for EPS. True by default."
+		},
+		"EPS Pants": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Description": "Toggles pants intended for EPS. True by default."
+		},
+	},
+	"Changes": [
+	
+		///////////////
+		// MALE BASE //
+		///////////////
+	
+		// Male Base
+		{
+          "Action": "Load",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_base.png",
+		  "When": {
+			"EPS Male Base": "true"
+			}
+		},
+		{
+          "Action": "Load",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_base.png",
+		  "When": {
+			"EPS Male Base": "true"
+			}
+		},
+		
+		//////////////
+		// Male Jaw //
+		//////////////
+		
+		// Vanilla Jaw
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_jaw_vanilla.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Jaw": "Vanilla"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_jaw_vanilla.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Jaw": "Vanilla"
+			}
+		},
+		
+		// Round Jaw
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_jaw_round.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Jaw": "Round"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_jaw_round.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Jaw": "Round"
+			}
+		},
+		
+		///////////////
+		// Male Face //
+		///////////////
+		
+		// Male Square Face
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_face_square.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Face": "Square"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_face_square.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Face": "Square"
+			}
+		},
+		
+		// Male Round Face
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_face_round.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Face": "Round"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_face_round.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Face": "Round"
+			}
+		},
+		
+		///////////////
+		// Male Nose //
+		///////////////
+		
+		// Vanilla Nose
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_nose_vanilla.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Nose": "Vanilla"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_nose_vanilla.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Nose": "Vanilla"
+			}
+		},
+		
+		// Pointy Nose
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_nose_pointy.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Nose": "Pointy"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_nose_pointy.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Nose": "Pointy"
+			}
+		},
+		
+		// Large Nose
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_nose_large.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Nose": "Large"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_nose_large.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Nose": "Large"
+			}
+		},
+		
+		///////////////
+		// Male Eyes //
+		///////////////
+		
+		// Small Eyes
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_eyes_small.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 288, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Eyes": "Small"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_eyes_small.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 288, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Eyes": "Small"
+			}
+		},
+		
+		///////////////////
+		// Male Eyebrows //
+		///////////////////
+		
+		// Short Eyebrows
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_eyebrows_short.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Eyebrows": "Short"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_eyebrows_short.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Eyebrows": "Short"
+			}
+		},
+		
+		// Long Eyebrows
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_eyebrows_long.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Eyebrows": "Long"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_eyebrows_long.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Eyebrows": "Long"
+			}
+		},
+		
+		// Unibrow
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_eyebrows_uni.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Eyebrows": "Unibrow"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_eyebrows_uni.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Eyebrows": "Unibrow"
+			}
+		},
+		
+		//////////////////
+		// Male Sleeves //
+		//////////////////
+
+		// Short Sleeves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_sleeves_short.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Sleeves": "Short"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_sleeves_short.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Sleeves": "Short"
+			}
+		},
+		
+		// Elbow Sleeves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_sleeves_elbow.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Sleeves": "Elbow"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_sleeves_elbow.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Sleeves": "Elbow"
+			}
+		},
+		
+		// Long Sleeves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_sleeves_long.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Sleeves": "Long"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_sleeves_long.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Sleeves": "Long"
+			}
+		},
+		
+		/////////////////
+		// Male Gloves //
+		/////////////////
+		
+		// Brown Gloves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_gloves_brown.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Gloves": "Brown"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_gloves_brown.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Gloves": "Brown"
+			}
+		},
+		
+		// Black Gloves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_gloves_black.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Gloves": "Black"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_gloves_black.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Gloves": "Black"
+			}
+		},
+		
+		// Green Gloves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_gloves_green.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Gloves": "Green"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_gloves_green.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Gloves": "Green"
+			}
+		},
+		
+		// Yellow Gloves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_gloves_yellow.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Gloves": "Yellow"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_gloves_yellow.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Gloves": "Yellow"
+			}
+		},
+		
+		////////////////
+		// Male Shoes //
+		////////////////
+
+		// Small Shoes
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_shoes_small.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Shoes": "Small"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_shoes_small.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Shoes": "Small"
+			}
+		},
+		
+		// Pointy Shoes
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_shoes_pointy.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Shoes": "Pointy"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_shoes_pointy.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Shoes": "Pointy"
+			}
+		},
+		
+		// Large Shoes
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_shoes_large.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Shoes": "Large"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_shoes_large.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Shoes": "Large"
+			}
+		},
+		
+		// Sandals
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_shoes_sandals.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Shoes": "Sandals"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_shoes_sandals.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Male Base": "true",
+			"Male Shoes": "Sandals"
+			}
+		},
+		
+		/////////////////
+		// FEMALE BASE //
+		/////////////////
+	   
+		// Female Base
+		{
+          "Action": "Load",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_base.png",
+		  "When": {
+			"EPS Female Base": "true"
+			}
+		},
+		{
+          "Action": "Load",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_base.png",
+		  "When": {
+			"EPS Female Base": "true"
+			}
+		},
+		
+		////////////////
+		// Female Jaw //
+		////////////////
+		
+		// Vanilla Jaw
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_jaw_vanilla.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Jaw": "Vanilla"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_jaw_vanilla.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Jaw": "Vanilla"
+			}
+		},
+		
+		// Round Jaw
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_jaw_round.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Jaw": "Round"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_jaw_round.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Jaw": "Round"
+			}
+		},
+		
+		/////////////////
+		// Female Face //
+		/////////////////
+		
+		// Square Face
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_face_square.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Face": "Square"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_face_square.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Face": "Square"
+			}
+		},
+		
+		// Round Face
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_face_round.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Face": "Round"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_face_round.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Face": "Round"
+			}
+		},
+		
+		/////////////////
+		// Female Nose //
+		/////////////////
+		
+		// Vanilla Nose
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_nose_vanilla.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Nose": "Vanilla"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_nose_vanilla.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Nose": "Vanilla"
+			}
+		},
+		
+		// Pointy Nose
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_nose_pointy.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Nose": "Pointy"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_nose_pointy.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Nose": "Pointy"
+			}
+		},
+		
+		// Large Nose
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_nose_large.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Nose": "Large"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_nose_large.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Nose": "Large"
+			}
+		},
+		
+		/////////////////
+		// Female Eyes //
+		/////////////////
+		
+		// Small Eyes
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_eyes_small.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 288, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Eyes": "Small"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_eyes_small.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 288, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Eyes": "Small"
+			}
+		},
+		
+		/////////////////////
+		// Female Eyebrows //
+		/////////////////////
+		
+		// Short Eyebrows
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_eyebrows_short.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Eyebrows": "Short"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_eyebrows_short.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Eyebrows": "Short"
+			}
+		},
+		
+		// Long Eyebrows
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_eyebrows_long.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Eyebrows": "Long"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_eyebrows_long.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Eyebrows": "Long"
+			}
+		},
+		
+		// Unibrow
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_eyebrows_uni.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Eyebrows": "Unibrow"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_eyebrows_uni.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Eyebrows": "Unibrow"
+			}
+		},
+		
+		////////////////////
+		// Female Sleeves //
+		////////////////////
+
+		// Short Sleeves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_sleeves_short.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Sleeves": "Short"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_sleeves_short.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Sleeves": "Short"
+			}
+		},
+		
+		// Elbow Sleeves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_sleeves_elbow.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Sleeves": "Elbow"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_sleeves_elbow.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Sleeves": "Elbow"
+			}
+		},
+		
+		// Long Sleeves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_sleeves_long.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Sleeves": "Long"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_sleeves_long.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Sleeves": "Long"
+			}
+		},
+		
+		///////////////////
+		// Female Gloves //
+		///////////////////
+		
+		// Brown Gloves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_gloves_brown.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Gloves": "Brown",
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_gloves_brown.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Gloves": "Brown",
+			}
+		},
+		
+		// Black Gloves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_gloves_black.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Gloves": "Black"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_gloves_black.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Gloves": "Black"
+			}
+		},
+		
+		// Green Gloves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_gloves_green.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Gloves": "Green"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_gloves_green.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Gloves": "Green"
+			}
+		},
+		
+		// Yellow Gloves
+		
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_gloves_yellow.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Gloves": "Yellow"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_gloves_yellow.png",
+		  "ToArea": { "X": 96, "Y": 0, "Width": 192, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Gloves": "Yellow"
+			}
+		},
+		
+		//////////////////
+		// Female Shoes //
+		//////////////////
+
+		// Small Shoes
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_shoes_small.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Shoes": "Small"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_shoes_small.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Shoes": "Small"
+			}
+		},
+		
+		// Pointy Shoes
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_shoes_pointy.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Shoes": "Pointy"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_shoes_pointy.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Shoes": "Pointy"
+			}
+		},
+		
+		// Large Shoes
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_shoes_large.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Shoes": "Large"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_shoes_large.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Shoes": "Large"
+			}
+		},
+		
+		// Sandals
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_shoes_sandals.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Shoes": "Sandals"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_shoes_sandals.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 96, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Female Shoes": "Sandals"
+			}
+		},
+		
+		///////////
+		// OTHER //
+		///////////
+	   
+		// Fix Blinking
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_blinkfix_eyebrows.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 288, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"Fix Female Blinking": "true",
+			"EPS Female Base": "true",
+			"Female Eyebrows": "Short, Long, Unibrow"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_blinkfix_eyebrows.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 288, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"Fix Female Blinking": "true",
+			"EPS Female Base": "true",
+			"Female Eyebrows": "Short, Long, Unibrow"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_blinkfix_noeyebrows.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 288, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"Fix Female Blinking": "true",
+			"EPS Female Base": "true",
+			"Female Eyebrows": "None"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_blinkfix_noeyebrows.png",
+		  "ToArea": { "X": 0, "Y": 0, "Width": 288, "Height": 672 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"Fix Female Blinking": "true",
+			"EPS Female Base": "true",
+			"Female Eyebrows": "None"
+			}
+		},
+	   
+		// Accessories
+		{
+          "Action": "Load",
+          "Target": "Characters/Farmer/accessories",
+          "FromFile": "assets/accessories.png",
+		  "When": {
+			"EPS Accessories": "true"
+			}
+		},
+	   
+		// Hats
+		{
+          "Action": "Load",
+          "Target": "Characters/Farmer/hats",
+          "FromFile": "assets/hats.png",
+		  "When": {
+			"EPS Hats": "true"
+			}
+		},
+	   
+		// Hairstyles
+		{
+          "Action": "Load",
+          "Target": "Characters/Farmer/hairstyles",
+          "FromFile": "assets/hairstyles.png",
+		  "When": {
+			"EPS Hairstyles": "true"
+			}
+		},
+		{
+          "Action": "Load",
+          "Target": "Characters/Farmer/hairstyles2",
+          "FromFile": "assets/hairstyles2.png",
+		  "When": {
+			"EPS Hairstyles": "true"
+			}
+		},
+	   
+		// Shirts
+		{
+          "Action": "Load",
+          "Target": "Characters/Farmer/shirts",
+          "FromFile": "assets/shirts.png",
+		  "When": {
+			"EPS Shirts": "true",
+			"Feminine Torso": "false"
+			}
+		},
+		
+		// Feminine Torso
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/shirts",
+          "FromFile": "assets/shirts_feminine.png",
+		  "When": {
+			"EPS Shirts": "true",
+			"Feminine Torso": "true"
+			}
+		},
+		
+		// Horse Reins
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base",
+          "FromFile": "assets/farmer_male/farmer_horse_reins.png",
+		  "ToArea": { "X": 160, "Y": 544, "Width": 32, "Height": 32 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"Horse Reins": "true"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_base_bald",
+          "FromFile": "assets/farmer_male/farmer_horse_reins.png",
+		  "ToArea": { "X": 160, "Y": 544, "Width": 32, "Height": 32 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"Horse Reins": "true"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base",
+          "FromFile": "assets/farmer_female/farmer_girl_horse_reins.png",
+		  "ToArea": { "X": 160, "Y": 544, "Width": 32, "Height": 32 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Horse Reins": "true"
+			}
+		},
+		{
+          "Action": "EditImage",
+          "Target": "Characters/Farmer/farmer_girl_base_bald",
+          "FromFile": "assets/farmer_female/farmer_girl_horse_reins.png",
+		  "ToArea": { "X": 160, "Y": 544, "Width": 32, "Height": 32 },
+		  "PatchMode": "Overlay",
+		  "When": {
+			"EPS Female Base": "true",
+			"Horse Reins": "true"
+			}
+		},
+		
+		// Pants
+		{
+          "Action": "Load",
+          "Target": "Characters/Farmer/pants",
+          "FromFile": "assets/pants.png",
+		  "When": {
+			"EPS Pants": "true"
+			}
+		},
+    ]
+}
+
+// Squawk, finally at the bottom! *phew*
+// ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+// ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+// ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+// ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+// ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+// ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+// ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+// ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+// ssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+// ssssssssssssssssssssssssssssssssssssssMMMMMMssMMMMMMssssssssssssssssssssssssssss
+// ssssssssssssssssssssssssssssssssssMMMMyy::::MM++::::MMMMMMMMssssssssssssssssssss
+// ssssssssssssssssssssssssssssssMMMM--yy++++::yyyy++yyyy::::++MMMMssssssssssssssss
+// ssssssssssssssssssssssssssssMM--yy::++yyyyyy::++yy::++yyyyMM::++MMssssssssssssss
+// ssssssssssssssssssssssssssMM--yy::++yy++::::yyyy++----++--++yy::MMssssssssssssss
+// ssssssssssssssssssssssssMM--::::++yy++::yy++--............--yy++yyMMssssssssssss
+// ssssssssssssssssssssssMM----++++yy++--............--------..++yyyy++MMssssssssss
+// ssssssssssssssssssssMM--........................--........--..++++yyMMssssssssss
+// ssssssssssssssssssssMM........................--..MMMMMMMM..--..yyMMssssssssssss
+// ssssssssssssssssMMNNNNNNNNNN--....----......--..MM--``MM--MM--..yyyyMMssssssssss
+// ssssssssssssssMMhhhhhhhhhhhhNN..--mmMM--..--..MM----MMMM::MM--....yy::MMssssssss
+// ssssssssssssMMhhmmmmmmmmmmmmNN..--MMMM--..--MM//::::MMMM//MM--....::yyMMssssssss
+// ssssssssssMMhhmmmmmmmmmmNNNNNN--..----....--..MM////////MMMM--....yyMMssssssssss
+// ssssssssssMMhhmmmmmmNNNNNNNNNN--NNNN----....--..MMMMMMMMMM--....++yyMMssssssssss
+// ssssssssMMhhmmmmNNNNNNNNNNNNNNNNmmmmNNyy----..------------..--++yyyy::MMssssssss
+// ssssssssMMhhmmmmmmmmmmmmmmmmmmhhhhhhNNyy++yy--............--yyyy::::yyMMssssssss
+// ssssssssMMhhmmmmmmmmmmhhhhhhhhhhhhMMMM++yyyy::++yy++::yyyy++++::yyyyMMssssssssss
+// ssssssssMMhhmmhhhhhhhhhhhhhhMMMMMMMMMMyy++yyyyyy++::yy++::yyyyyyyyyy++MMssssssss
+// ssssssssMMhhhhhhMMMMMMMMMMMMNNNNNNNNNN++yy++::::yyyy++::yy++::yy::::yyMMssssssss
+// ssssssssMMhhhhMMssssMMNNNNNNNNmmmmmmNNyy::yyyyyy++yyyyyyyyyyyy++yyyyMMssssssssss
+// ssssssssMMhhMMssssssssMMNNmmmmmmmmNNNN++yy::::yyyy++yy++::::++yyyyMMssssssssssss
+// ssssssssssMMMMssssssssssMMNNNNNNNNNNyyyy++yyyy++::::yyyyyyyyyy::::yyMMssssssssss
+// ssssssssssssssssssssssssssssssssMMMM::++yy++::yyyyyy++::yy++::yyyy++MMssssssssss
+// ssssssssssssssssssssssssssssssssMM::yy::::yyyy::++yyyyyy++yyyy++++MMssssssssssss
+// ssssssssssssssssssssssssssssssssssMM++++yyyy++yyyyyy++yyyy++yyyyyyMMssssssssssss
+// ssssssssssssssssssssssssssssssssssMMMMyy++++::++++::yyyy++++yyyyMMssssssssssssss
+// ssssssssssssssssssssssssssssssssMM::yy++::::++yyyy++::::yyyy++++++MMssssssssssss
+// ssssssssssssssssssssssssssssssMM++mm::::yyyyyy++::yy++++::::yyyyyyMMssssssssssss
+// ssssssssssssssssssssssssssssssMM::++++yy++++::::++++::::yyyy++::::yyMMssssssssss
+// ssssssssssssssssssssssssssssMM::mm::yy::::yyyyyy::::yyyy++::::yyyy::MMssssssssss
+// ssssssssssssssssssssssssssssMMyy++mm::yyyy++++++++yy++++::yyyy++++MMssssssssssss

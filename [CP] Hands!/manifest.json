@@ -1,0 +1,11 @@
+{
+  "Name": "Hand Cursor",
+  "Author": "Data_",
+  "Version": "1.0.1",
+  "Description": "Replaces vanilla cursor with a cute little hand and shit",
+  "UniqueID": "Data_.HandCursor",
+  "UpdateKeys": [ "Nexus:9277" ],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}
