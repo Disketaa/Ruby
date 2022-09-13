@@ -1,9 +1,9 @@
 {
   "IsEnableQuickStack": true,
-  "QuickStackRange": 5,
+  "QuickStackRange": 4,
   "IsQuickStackIntoBuildingsWithInventories": true,
   "IsQuickStackOverflowItems": true,
-  "IsQuickStackTooltipDrawNearbyChests": true,
+  "IsQuickStackTooltipDrawNearbyChests": false,
   "IsEnableQuickStackHotkey": false,
   "QuickStackKeyboardHotkey": "K",
   "QuickStackControllerHotkey": "LeftStick",

@@ -1,0 +1,11 @@
+{
+  "Controls": {
+    "Organize": [
+      "R"
+    ],
+    "StackToChest": [
+      "Q"
+    ],
+    "OrganizeAfterStackToChest": false
+  }
+}
