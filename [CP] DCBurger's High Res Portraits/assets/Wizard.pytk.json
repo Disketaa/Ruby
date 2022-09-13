@@ -4,7 +4,7 @@
 "Animation": 
 {
 "FrameWidth":512,
-"FrameHeight":256,
+"FrameHeight":1024,
 "FPS":20
 }
 }

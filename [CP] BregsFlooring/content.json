@@ -1,0 +1,130 @@
+{
+	"Format": "1.3",
+
+	"ConfigSchema": {
+        "WoodFloor": {
+            "AllowValues": "true, false",		
+			"Default": "true"
+        },
+		"StoneFloor": {
+            "AllowValues": "true, false",		
+			"Default": "true"
+        },
+		"WeatheredFloor": {
+            "AllowValues": "true, false",		
+			"Default": "true"
+        },
+		"CrystalFloor": {
+            "AllowValues": "true, false",		
+			"Default": "true"
+        },
+		"StrawFloor": {
+            "AllowValues": "true, false",		
+			"Default": "true"
+        },
+		"GravelPath": {
+            "AllowValues": "true, false",		
+			"Default": "true"
+        },
+		"WoodPath": {
+            "AllowValues": "true, false",		
+			"Default": "true"
+        },
+		"CrystalPath": {
+            "AllowValues": "true, false",		
+			"Default": "true"
+        },
+		"CobblestonePath": {
+            "AllowValues": "true, false",		
+			"Default": "true"
+        },
+		"SteppingStonePath": {
+            "AllowValues": "true, false",		
+			"Default": "true"
+        }
+    },
+	
+	"Changes": [
+	   
+		{
+			"Action": "EditImage",
+			"Target": "TerrainFeatures/Flooring",
+			"FromFile": "assets/BregsFlooring.xnb",
+			"FromArea": { "X": 0, "Y": 0, "Width": 64, "Height": 64 },
+			"ToArea": { "X": 0, "Y": 0, "Width": 64, "Height": 64 },
+			"When": { "WoodFloor": "true" }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "TerrainFeatures/Flooring",
+			"FromFile": "assets/BregsFlooring.xnb",
+			"FromArea": { "X": 64, "Y": 0, "Width": 64, "Height": 64 },
+			"ToArea": { "X": 64, "Y": 0, "Width": 64, "Height": 64 },
+			"When": { "StoneFloor": "true" }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "TerrainFeatures/Flooring",
+			"FromFile": "assets/BregsFlooring.xnb",
+			"FromArea": { "X": 128, "Y": 0, "Width": 64, "Height": 64 },
+			"ToArea": { "X": 128, "Y": 0, "Width": 64, "Height": 64 },
+			"When": { "WeatheredFloor": "true" }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "TerrainFeatures/Flooring",
+			"FromFile": "assets/BregsFlooring.xnb",
+			"FromArea": { "X": 192, "Y": 0, "Width": 64, "Height": 64 },
+			"ToArea": { "X": 192, "Y": 0, "Width": 64, "Height": 64 },
+			"When": { "CrystalFloor": "true" }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "TerrainFeatures/Flooring",
+			"FromFile": "assets/BregsFlooring.xnb",
+			"FromArea": { "X": 0, "Y": 64, "Width": 64, "Height": 64 },
+			"ToArea": { "X": 0, "Y": 64, "Width": 64, "Height": 64 },
+			"When": { "StrawFloor": "true" }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "TerrainFeatures/Flooring",
+			"FromFile": "assets/BregsFlooring.xnb",
+			"FromArea": { "X": 64, "Y": 64, "Width": 64, "Height": 64 },
+			"ToArea": { "X": 64, "Y": 64, "Width": 64, "Height": 64 },
+			"When": { "GravelPath": "true" }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "TerrainFeatures/Flooring",
+			"FromFile": "assets/BregsFlooring.xnb",
+			"FromArea": { "X": 128, "Y": 64, "Width": 64, "Height": 64 },
+			"ToArea": { "X": 128, "Y": 64, "Width": 64, "Height": 64 },
+			"When": { "WoodPath": "true" }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "TerrainFeatures/Flooring",
+			"FromFile": "assets/BregsFlooring.xnb",
+			"FromArea": { "X": 192, "Y": 64, "Width": 64, "Height": 64 },
+			"ToArea": { "X": 192, "Y": 64, "Width": 64, "Height": 64 },
+			"When": { "CrystalPath": "true" }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "TerrainFeatures/Flooring",
+			"FromFile": "assets/BregsFlooring.xnb",
+			"FromArea": { "X": 0, "Y": 128, "Width": 64, "Height": 64 },
+			"ToArea": { "X": 0, "Y": 128, "Width": 64, "Height": 64 },
+			"When": { "CobblestonePath": "true" }
+		},
+		{
+			"Action": "EditImage",
+			"Target": "TerrainFeatures/Flooring",
+			"FromFile": "assets/BregsFlooring.xnb",
+			"FromArea": { "X": 64, "Y": 128, "Width": 64, "Height": 64 },
+			"ToArea": { "X": 64, "Y": 128, "Width": 64, "Height": 64 },
+			"When": { "SteppingStonePath": "true" }
+		}
+	]
+}

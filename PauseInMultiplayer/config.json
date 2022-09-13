@@ -1,5 +1,5 @@
 {
-  "ShowPauseX": true,
+  "ShowPauseX": false,
   "FixSkullTime": true,
   "DisableSkullShaftFix": false,
   "LockMonsters": true,
