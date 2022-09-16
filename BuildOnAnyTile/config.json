@@ -1,0 +1,8 @@
+{
+  "BuildOnAllTerrainFeatures": false,
+  "BuildOnOtherBuildings": false,
+  "BuildOnWater": true,
+  "BuildOnImpassableTiles": true,
+  "BuildOnNoFurnitureTiles": true,
+  "BuildOnCaveAndShippingZones": true
+}
