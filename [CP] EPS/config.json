@@ -19,7 +19,7 @@
   "Feminine Torso": "false",
   "Horse Reins": "true",
   "* EXPERIMENTAL CONFIGS *": "@ Read Me!",
-  "Fix Female Blinking": "false",
+  "Fix Female Blinking": "true",
   "EPS Male Base": "true",
   "EPS Female Base": "true",
   "EPS Accessories": "true",
